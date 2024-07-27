@@ -9,13 +9,8 @@ const getSum = () => {
 	for(let i=0;i<sum1.length;i++){
 		sum=sum+Number(sum1[i].innerText)
 	}
-	 let newRow = document.createElement('tr');
-     let newCell = document.createElement('td');
-	  newCell.colSpan = "2";
-	  newCell.textContent = `Total price: ${sum}`;
-      newRow.appendChild(newCell);
-      let table = document.querySelector("table");
-      table.appendChild(newRow);
+	 let ans=document.getElementById("ans")
+	 ans.textContent=`Total price: ${sum}`;
 };
 
 getSumBtn.addEventListener("click", getSum);
