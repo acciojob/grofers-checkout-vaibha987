@@ -4,13 +4,17 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-	let sum1=document.querySelectorAll(".price")
-	let sum=0;
-	for(let i=0;i<sum1.length;i++){
-		sum=sum+Number(sum1[i].innerText)
+	let sum=0
+	let items=document.getElementsByClassName("price")
+	for(let item of items){
+		sum=sum+Number(item.innerText)
 	}
-	 let ans=document.getElementById("ans")
-	 ans.textContent=`Total price: ${sum}`;
+	let table=document.getElementById("table")
+    let row=document.createElement('tr')
+	let cell=document.createElement('td')
+	cell.innerText=sum
+	row.appendChild(cell)
+	table.appendChild(row)
 };
 
 getSumBtn.addEventListener("click", getSum);
