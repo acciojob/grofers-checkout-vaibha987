@@ -12,7 +12,7 @@ const getSum = () => {
 	let table=document.getElementById("table")
     let row=document.createElement('tr')
 	let cell=document.createElement('td')
-	cell.innerText=sum
+	cell.textContent=`Total Price: ${sum}`
 	row.appendChild(cell)
 	table.appendChild(row)
 };
